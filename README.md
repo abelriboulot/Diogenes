@@ -16,4 +16,5 @@ Then to install the software, just do the following.
 	cd Diogenes
 	sudo pip install -r requirements.txt
 	sudo pip install git+https://github.com/bsmurphy/PyKrige.git #PyKrige Git version, issues in the requirements.txt
+	sudo apt-get install python-tk
 	scrapy crawl rent -o entire_apartments_tokyo_20171224.csv
