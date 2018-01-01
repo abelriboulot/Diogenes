@@ -13,5 +13,6 @@ On mac, with brew installed:
 
 Then to install the software, just do the following.
 
+	cd Diogenes
 	pip install -r requirements.txt
 	scrapy crawl rent -o entire_apartments_tokyo_20171224.csv
