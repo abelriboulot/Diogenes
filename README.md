@@ -5,7 +5,7 @@ In order to build xgboost, you need to have gcc-c++ installed in your machine. Y
 On linux:
 
 	sudo yum install gcc gcc-c++
-	sudo apt-get install gcc gcc-c++
+	sudo apt-get install gcc-5 g++-5
 
 On mac, with brew installed:
 
