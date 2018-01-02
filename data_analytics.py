@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 import xgboost as xgb
 from sklearn.preprocessing import OneHotEncoder, LabelBinarizer
 import numpy as np
+from itertools import product
 
 gridx = np.arange(34.97, 37.02, 0.0005)
 gridy = np.arange(138.83, 140.87, 0.0005)
@@ -26,7 +27,7 @@ xgb_model = xgb.XGBRegressor()
 models = [xgb_model]
 
 data = pd.read_csv("data/entire_apartments_tokyo.csv")
-data = data[data.lng > 0 & data.Shiki < 10000 & data.Rei <10000 & data.rent < 10000]
+data = data[(data.lng > 0) & (data.Shiki < 10000) & (data.Rei <10000) & (data.rent < 10000)]
 encoder = LabelBinarizer()
 types_room = encoder.fit_transform(data['Typoroom'])
 
