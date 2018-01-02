@@ -11,8 +11,9 @@ class RentSpider(scrapy.Spider):
     name = 'rent'
 #    download_delay = 0.3
 #    start_urls = ['http://suumo.jp/chintai/shikoku/','http://suumo.jp/chintai/kyushu/','http://suumo.jp/chintai/chugoku/','http://suumo.jp/chintai/kansai/','http://suumo.jp/chintai/tokai/','http://suumo.jp/chintai/kanto/','http://suumo.jp/chintai/koshinetsu/','http://suumo.jp/chintai/tohoku/','http://suumo.jp/chintai/hokkaido/']
-    start_urls = ['http://suumo.jp/jj/chintai/ichiran/FR301FC001/?ar=030&bs=040&cb=0.0&ct=9999999&mb=0&mt=9999999&et=9999999&cn=9999999&tc=0401303&shkr1=03&shkr2=03&shkr3=03&shkr4=03&sngz=&po1=12&pc=50']
-
+#    start_urls = ['http://suumo.jp/jj/chintai/ichiran/FR301FC001/?ar=030&bs=040&cb=0.0&ct=9999999&mb=0&mt=9999999&et=9999999&cn=9999999&tc=0401303&shkr1=03&shkr2=03&shkr3=03&shkr4=03&sngz=&po1=12&pc=50']
+    start_urls = ['http://suumo.jp/jj/chintai/ichiran/FR301FC001/?ar=030&bs=040&cb=0.0&ct=9999999&mb=0&mt=9999999&et=9999999&cn=9999999&shkr1=03&shkr2=03&shkr3=03&shkr4=03&sngz=&po1=12&pc=50']
+    
     def parse(self, response):
 #    	for href in response.xpath(u'//a[text()="新着物件を見る"]/@href'):
 #    		yield response.follow(href, self.parse_properties)

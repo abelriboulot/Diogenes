@@ -18,3 +18,5 @@ Then to install the software, just do the following.
 	sudo pip install git+https://github.com/bsmurphy/PyKrige.git #PyKrige Git version, issues in the requirements.txt
 	sudo apt-get install python-tk
 	scrapy crawl rent -o entire_apartments_tokyo_20171224.csv
+
+To do: figure out the cleanup: A LOT OF DUPLICATIONS!!!
