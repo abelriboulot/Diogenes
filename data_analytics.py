@@ -9,7 +9,7 @@ import xgboost as xgb
 from sklearn.preprocessing import OneHotEncoder, LabelBinarizer
 import numpy as np
 
-svr_model = SVR(C=0.1)
+svr_model = SVR(C=0.1
 rf_model = RandomForestRegressor(n_estimators=1000)
 lr_model = LinearRegression(normalize=True, copy_X=True, fit_intercept=True)
 mlp_model = MLPRegressor(
