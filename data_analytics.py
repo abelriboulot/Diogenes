@@ -9,6 +9,7 @@ import xgboost as xgb
 from sklearn.preprocessing import OneHotEncoder, LabelBinarizer
 import numpy as np
 from itertools import product
+from itertools import product
 
 gridx = np.arange(34.97, 37.02, 0.0005)
 gridy = np.arange(138.83, 140.87, 0.0005)
