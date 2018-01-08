@@ -12,7 +12,7 @@ from itertools import product
 
 gridx = np.arange(34.97, 37.02, 0.0005)
 gridy = np.arange(138.83, 140.87, 0.0005)
-xy = list(product(gridx,gridy))
+xy = np.asarray(list(product(gridx,gridy)))
 svr_model = SVR(C=0.1)
 rf_model = RandomForestRegressor(n_estimators=1000)
 lr_model = LinearRegression(normalize=True, copy_X=True, fit_intercept=True)
@@ -49,4 +49,4 @@ for m in models:
 	print('RK score: ', m_rk.score(p_test, x_test, target_test))
 	price_map = m_rk.krige_residual(xy)
 	price_map_out = pd.DataFrame(zip(xy[:,0],xy[:,1],price_map))
-	pd.write_csv(m.__class__.__name__+'_price_map.csv')
+	price_map_out.to_csv(m.__class__.__name__+'_price_map.csv')
