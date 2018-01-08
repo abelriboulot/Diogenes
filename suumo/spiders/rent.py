@@ -20,7 +20,7 @@ class RentSpider(scrapy.Spider):
 #
 #    def parse_properties(self, response):
         self.logger.info('parse_properties function called on %s', response.url)
-    	next_page = response.xpath(u'//p[contains(@class,"pagination-parts")][last()]/a/@href').extract_first()
+        next_page = response.xpath(u'//p[contains(@class,"pagination-parts")][last()]/a/@href').extract_first()
     	for href in response.xpath(u'//a[text()="詳細を見る"]/@href').extract():
             yield scrapy.Request(href, callback=self.parse_details)
 
