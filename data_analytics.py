@@ -27,9 +27,7 @@ xgb_model = xgb.XGBRegressor()
 models = [xgb_model]
 
 data = pd.read_csv("data/entire_apartments_tokyo.csv")
-data = data[(data.lng > 0) & (data.Shiki < 10000) & (data.Rei <10000) & (data.rent < 10000)]
-encoder = LabelBinarizer()
-types_room = encoder.fit_transform(data['Typoroom'])
+data = data[(data.lng > 0) & (data.Shiki < 10000) & (data.Rei <10000) & (data.rent < 10000)]cd
 
 temp_df = pd.get_dummies(data[['m2','age','floor_detail','floors','units_number','Typoroom','material','unknown3','manshionka']], columns=['Typoroom','material','unknown3','manshionka'])
 p = np.asarray(temp_df)
