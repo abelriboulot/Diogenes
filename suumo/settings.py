@@ -36,7 +36,7 @@ COOKIES_ENABLED = False
 
 ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
 
-#IMAGES_STORE = '/Users/abelriboulot/Maverick/suumo/suumo/image_fold'
+# IMAGES_STORE = '/Users/abelriboulot/Maverick/suumo/suumo/image_fold'
 AUTOTHROTTLE_TARGET_CONCURRENCY = 3
 
 #AUTOTHROTTLE_ENABLED = True
