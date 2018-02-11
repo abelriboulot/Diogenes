@@ -39,8 +39,8 @@ def strip_breaks(x):
 
 def get_lat_long(x):
 	x = strip_breaks(x)
-	x = strip_breaks(x).split("?ido=")[1]
-	x = strip_breaks(x).split("&keido=")
+	x = x.split("?ido=")[1]
+	x = x.split("&keido=")
 	x = map(get_number,x)
 	return x
 
@@ -50,8 +50,10 @@ def get_dets(x):
 
 def get_lat(x):
 	x = get_lat_long(x)[1]
-	
 	return x
+
+def turn_image_into_original(x):
+	return x[:-5]+'o.jpg'
 
 number_field = Field(
 				input_processor= MapCompose(get_number),
@@ -64,7 +66,9 @@ text_field = Field(
 
 class Itemrent(Item):
 	rent = number_field
-	image_urls = Field()
+	image_urls = Field(
+				input_processor= MapCompose(turn_image_into_original)
+					)
 	images = Field()
 	title = text_field
 	Shiki = number_field

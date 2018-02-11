@@ -34,7 +34,7 @@ CONCURRENT_REQUESTS_PER_IP = 80
 REACTOR_THREADPOOL_MAXSIZE = 20
 COOKIES_ENABLED = False
 
-#ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
+ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
 
 #IMAGES_STORE = '/Users/abelriboulot/Maverick/suumo/suumo/image_fold'
 AUTOTHROTTLE_TARGET_CONCURRENCY = 3
