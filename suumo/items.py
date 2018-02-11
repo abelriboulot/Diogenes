@@ -53,7 +53,8 @@ def get_lat(x):
 	return x
 
 def turn_image_into_original(x):
-	return x[:-5]+'o.jpg'
+	x = x[:-5]+'o.jpg'
+	return x
 
 number_field = Field(
 				input_processor= MapCompose(get_number),
